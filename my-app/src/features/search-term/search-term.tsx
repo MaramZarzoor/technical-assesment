@@ -1,10 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 
 import {setSearchTerm, clearSearchTerm, selectSearchTerm, setSearchType, selectSearchType} from './search-term-slice';
 import {fetchUsers} from "../all-results/all-results-slice";
 
-const searchIconUrl = 'https://static-assets.codecademy.com/Courses/Learn-Redux/Recipes-App/icons/search.svg';
 const clearIconUrl = 'https://static-assets.codecademy.com/Courses/Learn-Redux/Recipes-App/icons/clear.svg';
 
 const searchTypes = ['users', 'repositories'];
@@ -36,7 +35,6 @@ export const SearchTerm = () => {
     return (
         <div className="search-params">
             <div className="search-container col-md-9">
-                <img id="search-icon" alt="" src={searchIconUrl}/>
                 <input
                     className="search"
                     type="text"

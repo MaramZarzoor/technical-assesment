@@ -20,10 +20,7 @@ export const AllResults = () => {
     const searchType = useSelector(selectSearchType);
 
     const onFirstRender = () => {
-        // dispatch(setSearchTerm('abc'));
         dispatch(setSearchType('users'));
-       // fetchUsers(dispatch, searchTerm, searchType);
-        // dispatch(loadData());
     }
     useEffect(onFirstRender, []);
 
